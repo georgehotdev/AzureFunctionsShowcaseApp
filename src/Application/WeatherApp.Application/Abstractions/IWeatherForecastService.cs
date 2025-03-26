@@ -5,5 +5,7 @@ namespace WeatherApp.Application.Abstractions;
 
 public interface IWeatherForecastService
 {
-    Task<Result<WeatherForecast?>> GetWeatherForecastAsync(string city);
+    Task<Result<WeatherForecast?>> IngressWeatherForecastAsync(string city);
+    Task<IEnumerable<WeatherForecastIngress>> GetAllWeatherForecastIngresses(DateTime fromDate, DateTime toDate);
+    Task<Result<WeatherForecast?>> GetWeatherForecast(string logEntryId);
 }

@@ -1,6 +1,6 @@
 ﻿using Ardalis.Result;
 
-namespace WeatherApp.Infrastructure.Http;
+namespace WeatherApp.Infrastructure.Abstractions;
 
 public interface IHttpService
 {

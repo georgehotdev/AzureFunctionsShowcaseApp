@@ -1,17 +1,23 @@
 using Microsoft.Azure.Functions.Worker.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WeatherApp.Api.Extensions;
+using WeatherApp.Infrastructure.Abstractions;
 
 var builder = FunctionsApplication.CreateBuilder(args);
 
 builder.ConfigureFunctionsWebApplication();
 
-// Application Insights isn't enabled by default. See https://aka.ms/AAt8mw4.
-// builder.Services
-//     .AddApplicationInsightsTelemetryWorkerService()
-//     .ConfigureFunctionsApplicationInsights();
+builder.Configure();
 
-builder.RegisterDependencies();
+var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var databaseInitializer = scope.ServiceProvider.GetRequiredService<IDatabaseInitializer>();
+    var storageInitializer = scope.ServiceProvider.GetRequiredService<IStorageInitializer>();
+    await databaseInitializer.EnsureTablesExistAsync();
+    await storageInitializer.EnsureContainersExistAsync();
+}
 
-builder.Build().Run();
+app.Run();

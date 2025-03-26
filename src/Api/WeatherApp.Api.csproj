@@ -29,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Application\WeatherApp.Application\WeatherApp.Application.csproj" />
     <ProjectReference Include="..\Infrastructure\WeatherApp.Infrastructure\WeatherApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\Persistence\WeatherApi.Persistence\WeatherApi.Persistence.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

@@ -24,7 +24,7 @@ public class WeatherDataBackgroundService
     {
         _logger.LogInformation($"Reading forecast for city {_weatherApiConfig.CityLookup} at [{DateTime.Now}]");
         
-        var weatherForecast = await _weatherForecastService.GetWeatherForecastAsync(_weatherApiConfig.CityLookup);
+        await _weatherForecastService.IngressWeatherForecastAsync(_weatherApiConfig.CityLookup);
 
         if (myTimer.ScheduleStatus is not null)
         {

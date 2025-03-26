@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.Result" Version="10.1.0" />
+    <PackageReference Include="Azure.Data.Tables" Version="12.10.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Domain\WeatherApi.Domain\WeatherApi.Domain.csproj" />
-    <ProjectReference Include="..\..\ExternalServices\WeatherApi.ExternalServices\WeatherApi.ExternalServices.csproj" />
     <ProjectReference Include="..\..\Infrastructure\WeatherApp.Infrastructure\WeatherApp.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\Persistence\WeatherApi.Persistence\WeatherApi.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi.Domain", "src\Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi.ExternalServices", "src\ExternalServices\WeatherApi.ExternalServices\WeatherApi.ExternalServices.csproj", "{40120776-7616-45A3-A188-0C6D889ECD84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi.Persistence", "src\Persistence\WeatherApi.Persistence\WeatherApi.Persistence.csproj", "{389DB8B0-8FED-45F2-BB10-FF989AE89DE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{40120776-7616-45A3-A188-0C6D889ECD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40120776-7616-45A3-A188-0C6D889ECD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40120776-7616-45A3-A188-0C6D889ECD84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{389DB8B0-8FED-45F2-BB10-FF989AE89DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{389DB8B0-8FED-45F2-BB10-FF989AE89DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{389DB8B0-8FED-45F2-BB10-FF989AE89DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{389DB8B0-8FED-45F2-BB10-FF989AE89DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

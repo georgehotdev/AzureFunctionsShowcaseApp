@@ -1,11 +1,10 @@
 ﻿using Ardalis.Result;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 using WeatherApi.Domain;
 using WeatherApi.ExternalServices.Abstractions;
 using WeatherApi.ExternalServices.OpenWeatherMap.Models;
+using WeatherApp.Infrastructure.Abstractions;
 using WeatherApp.Infrastructure.Configuration;
-using WeatherApp.Infrastructure.Http;
 
 namespace WeatherApi.ExternalServices.OpenWeatherMap;
 

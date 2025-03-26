@@ -13,7 +13,7 @@ internal record OpenWeatherMapResponse
 
     [JsonProperty("dt")]
     [JsonConverter(typeof(UnixDateTimeConverter))]
-    public long ForecastDate { get; set; }
+    public DateTime ForecastDate { get; set; }
 
 
     [JsonProperty("main")]
