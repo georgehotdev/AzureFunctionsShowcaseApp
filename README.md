@@ -10,7 +10,7 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
-    "WeatherApiConfig__ApiKey": "03c984c85c25d46f04c25371f741cb0d",
+    "WeatherApiConfig__ApiKey": "<YOUR_OPENWEATHER_API_KEY_GOES_HERE>",
     "WeatherApiConfig__CityLookup": "London",
     "WeatherApiConfig__BaseUrl": "https://api.openweathermap.org/data/2.5/weather",
     "TableStorageConfig__Uri": "http://127.0.0.1:10002/devstoreaccount1",
