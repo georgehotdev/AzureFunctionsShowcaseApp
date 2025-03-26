@@ -20,4 +20,5 @@ using (var scope = app.Services.CreateScope())
     await storageInitializer.EnsureContainersExistAsync();
 }
 
+
 app.Run();

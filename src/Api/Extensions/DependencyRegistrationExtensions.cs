@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.Functions.Worker.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using WeatherApi.ExternalServices.Abstractions;
 using WeatherApi.ExternalServices.OpenWeatherMap;
 using WeatherApi.Persistence.Abstractions;
@@ -30,6 +31,12 @@ public static class DependencyRegistrationExtensions
         builder.Services.Configure<BlobStorageConfig>(builder.Configuration.GetSection(nameof(BlobStorageConfig)));
         
         builder.Services.AddHttpClient();
+
+        builder.Services.AddSwaggerGen(c => {
+            c.SwaggerDoc("v1",
+                new OpenApiInfo { Title = "My API", Version = "v1" });
+        });
+
 
         return builder;
     }
